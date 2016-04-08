@@ -1,7 +1,4 @@
-__author__ = 'cobedien'
-
-#from an original by cobedien with cpu type and lab host
-#updated by dapresto
+__author__ = 'dapresto'
 
 import sys
 import json
@@ -22,8 +19,8 @@ kick_start_image = response.json()['result']['body']['kickstart_ver_str']
 system_image = response.json()['result']['body']['kick_file_name']
 host_name = response.json()['result']['body']['host_name']
 cpu_type = response.json()['result']['body']['cpu_name']
-memory_size = response.json()['result']['body']['memory']
-memory_type = response.json()['result']['body']['memory_type']
+mem_size = response.json()['result']['body']['memory']
+mem_type = response.json()['result']['body']['mem_type']
 
 
 print ("")
@@ -32,5 +29,5 @@ print ('host name:'+ host_name)
 print ('kickstart image version :' + kick_start_image)
 print ('system image version :s' + system_image)
 print ('cpu type is :' + cpu_type)
-print ('memory size is :' + memory_size + memory_type)
+print ('memory size is :' + str(mem_size) + mem_type)
 print ("===============================")
